@@ -1,0 +1,18 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+Related
+{% endblock %}
+
+{% block body %}
+<h1>{{ messege }}</h1>
+<ul>
+    {% for title in entry %}
+    <a href="{% url 'title' title=title %}"> 
+    <li>
+        {{ title }}
+    </li>
+</a>
+    {% endfor %}
+</ul>
+{% endblock %}
